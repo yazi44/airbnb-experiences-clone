@@ -12,3 +12,37 @@ nav {
     padding: 20px 36px;
     box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
+
+.navbar--logo {
+    max-width: 100px;
+}
+
+.photogrid {
+    display: flex;
+    padding-top: 30px;
+    padding-left: 176px;
+    width: 550px;
+    height: 853px;
+}
+
+.hero--title {
+    padding-left: 36px;
+    color: #000;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    /* 39.6px */
+}
+
+.hero--description {
+    padding-left: 36px;
+    color: #222;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 110%;
+    /* 17.6px */
+}
