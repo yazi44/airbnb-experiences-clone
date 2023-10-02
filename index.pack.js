@@ -489,8 +489,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function Hero() {
     return _react2.default.createElement(
-        "div",
-        null,
+        "section",
+        { className: "hero" },
         _react2.default.createElement("img", { src: "../images/photo-grid.png", className: "photogrid" }),
         _react2.default.createElement(
             "h1",

@@ -17,16 +17,29 @@ nav {
     max-width: 100px;
 }
 
-.photogrid {
+section {
+    padding: 20px;
+}
+
+.hero {
     display: flex;
-    padding-top: 30px;
-    padding-left: 176px;
-    width: 550px;
-    height: 853px;
+    flex-direction: column;
+}
+.photogrid {
+    /* display: flex; */
+    /* margin-top: 30px; */
+    /* padding-top: 30px; */
+    /* margin-left: 250px; */
+    /* margin: auto; */
+    /* width:850px; */
+    /* height: 853px; */
+    max-width: 400px;
+    align-self: center;
 }
 
 .hero--title {
-    padding-left: 36px;
+    /* padding-left: 36px; */
+    margin-bottom: 16px;
     color: #000;
     font-family: Poppins;
     font-size: 36px;
@@ -37,8 +50,9 @@ nav {
 }
 
 .hero--description {
-    padding-left: 36px;
+    /* padding-left: 36px; */
     color: #222;
+    margin-top: 0;
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
