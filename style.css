@@ -13,6 +13,14 @@ nav {
     box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
 
+.gray {
+    color: #918E9B;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 .navbar--logo {
     max-width: 100px;
 }
@@ -60,3 +68,19 @@ section {
     line-height: 110%;
     /* 17.6px */
 }
+
+.card {
+    width: 350px;
+    font-size: 15px;
+}
+
+.card--picture1 {
+    width: 250px;
+    border-radius: 9px;
+}
+
+.card--stats {
+    display: flex;
+    align-items: center;
+}
+

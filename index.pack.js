@@ -411,6 +411,10 @@ var _Card = __webpack_require__(6);
 
 var _Card2 = _interopRequireDefault(_Card);
 
+var _data = __webpack_require__(19);
+
+var _data2 = _interopRequireDefault(_data);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /*
@@ -419,12 +423,22 @@ Check the Figma file for the design specifics.
 */
 
 function App() {
+    var cards = _data2.default.map(function (card) {
+        return _react2.default.createElement(_Card2.default, {
+            img: card.coverImg,
+            rating: card.stats.rating,
+            reviewCount: card.stats.reviewCount,
+            location: card.location,
+            title: card.title,
+            price: card.price
+        });
+    });
     return _react2.default.createElement(
         "div",
         null,
         _react2.default.createElement(_navbar2.default, null),
         _react2.default.createElement(_hero2.default, null),
-        _react2.default.createElement(_Card2.default, null)
+        cards
     );
 }
 
@@ -511,40 +525,52 @@ Notes:
   this data into the component.
 */
 
-function Card() {
+function Card(props) {
   return _react2.default.createElement(
     "section",
     { className: "card" },
-    _react2.default.createElement("img", { src: "../images/katie-zaferes.png", className: "card--picture1" }),
+    _react2.default.createElement("img", { src: "../images/" + props.img, className: "card--picture1" }),
     _react2.default.createElement(
       "div",
-      null,
+      { className: "card--stats" },
       _react2.default.createElement("img", { src: "../images/star.png", className: "card--star" }),
       _react2.default.createElement(
         "span",
         null,
-        " 5.0 "
+        " ",
+        props.rating,
+        " "
       ),
       _react2.default.createElement(
         "span",
-        null,
-        " (6) \u2022 "
+        { className: "gray" },
+        " (",
+        props.reviewCount,
+        ") \u2022 "
       ),
       _react2.default.createElement(
         "span",
-        null,
-        " USA "
+        { className: "gray" },
+        " ",
+        props.location,
+        " "
       )
     ),
     _react2.default.createElement(
       "p",
       null,
-      "Life lessons with Katie Zaferes"
+      props.title
     ),
     _react2.default.createElement(
       "p",
       null,
-      "From $136 / person"
+      _react2.default.createElement(
+        "span",
+        { className: "bold" },
+        "From $",
+        props.price
+      ),
+      " / person"
     )
   );
 }
@@ -30645,6 +30671,66 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = [{
+    id: 1,
+    title: "Life Lessons with Katie Zaferes",
+    description: "I will share with you what I call \"Positively Impactful Moments of Disappointment.\" Throughout my career, many of my highest moments only came after setbacks and losses. But learning from those difficult moments is what gave me the ability to rise above them and reach my goals.",
+    price: 136,
+    coverImg: "katie-zaferes.png",
+    stats: {
+        rating: 5.0,
+        reviewCount: 6
+    },
+    location: "Online",
+    openSpots: 0
+}, {
+    id: 2,
+    title: "Learn Wedding Photography",
+    description: "Interested in becoming a wedding photographer? For beginner and experienced photographers alike, join us in learning techniques required to leave the happy couple with memories that'll last a lifetime.",
+    price: 125,
+    coverImg: "wedding-photography.png",
+    stats: {
+        rating: 5.0,
+        reviewCount: 30
+    },
+    location: "Online",
+    openSpots: 27
+}, {
+    id: 3,
+    title: "Group Mountain Biking",
+    description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+    price: 50,
+    coverImg: "mountain-bike.png",
+    stats: {
+        rating: 4.8,
+        reviewCount: 2
+    },
+    location: "Norway",
+    openSpots: 3
+}, {
+    id: 4,
+    title: "Learn Archery",
+    description: ":Learn the fundamentals of archery. (Bow and arrow provided!)",
+    price: 20,
+    coverImg: "archery.jpg",
+    stats: {
+        rating: 4.5,
+        reviewCount: 12
+    },
+    location: "Denmark",
+    openSpots: 10
+}];
 
 /***/ })
 /******/ ]);
