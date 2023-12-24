@@ -41,7 +41,7 @@ section {
     /* margin: auto; */
     /* width:850px; */
     /* height: 853px; */
-    max-width: 400px;
+    max-width: 800px;
     align-self: center;
 }
 
@@ -69,14 +69,30 @@ section {
     /* 17.6px */
 }
 
+.cards-lists {
+    display: flex;
+    flex-wrap: nowrap;
+    gap:20px;
+    overflow-x: auto;
+}
 .card {
-    width: 350px;
-    font-size: 15px;
+    width: 300px;
+    font-size: 16px;
+    flex: 0 0 auto;         /* ADD */
+    display: flex;          /* ADD */
+    flex-direction: column; /* ADD */
 }
 
 .card--picture1 {
-    width: 250px;
+    width: 100%;
     border-radius: 9px;
+    margin-bottom: 9px;
+}
+
+
+.card--title {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card--stats {
@@ -84,3 +100,10 @@ section {
     align-items: center;
 }
 
+.card--price {
+    margin-top: auto;
+} 
+
+.card--star {
+    height: 14px;
+}
